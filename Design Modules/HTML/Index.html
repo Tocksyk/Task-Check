@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+        <script src="/JS/active.js" type="application/javascript"></script>
+        <script src="/JS/pending.js" type="application/javascript"></script>
+        <script src="/JS/completed.js" type="application/javascript"></script>
+        <script src="/JS/dashboard.js" type="application/javascript"></script>
+        <title></title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="Section1">
+                <div class="up">
+                    <p id="userdetail">
+                        Logged in As <br><br><h1><%= ID %></h1>
+                    </p>
+                </div>
+            </div>
+            <div class="Section1.5">
+                <div class="buttonsPending">
+                    <input type="radio" name="grp2" id="working" onclick="start();">
+                    <label for="working">Working</label>
+                    <input type="radio" name="grp2" id="exit" onclick="exit();">
+                    <label for="exit">Exit</label>
+                    <div class="input div">
+                        <div id="task">
+                            <label for="taskname">Task:</label><br>
+                            <input type="text" id="taskname"><br><br>
+                        </div>
+                    </div>
+                    <button id="add" onclick="addrow();">Add task</button>
+                    <a href="http://localhost:3000/logout">Logout</a>
+                </div>
+            </div>
+
+            <div class="Section2">
+                <div class="left">
+                    <div class="pending">
+                        <p>Pending Task Table</p>
+                       
+                        <table id="Table1">
+                            <tr>
+                              <th>ID</th>
+                              <th>Task</th>
+                              <th>Date</th>
+                              <th>Status</th>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="completed">
+                        <p>Completed Task Table</p>
+                        <table id="Table2">
+                            <tr>
+                              <th>ID</th>
+                              <th>Task</th>
+                              <th>Date</th>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

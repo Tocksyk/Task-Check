@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+        <script src="/JS/active.js" type="application/javascript"></script>
+        <script src="/JS/pending.js" type="application/javascript"></script>
+        <script src="/JS/completed.js" type="application/javascript"></script>
+        <script src="/JS/dashboard.js" type="application/javascript"></script>
+        <title></title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="Section1">
+                <div class="up">
+                    <p id="userdetail">
+                        Logged in As <br><h1><%= ID %></h1>
+                    </p>
+                </div>
+            </div>
+            <div class="Section1.5">
+                <div class="buttonsPending">
+                    <input type="radio" name="grp2" id="working" onclick="start();">
+                    <label for="startshift">Start Shift</label>
+                    <input type="radio" name="grp2" id="exit" onclick="exit();">
+                    <label for="endshift">End Shift</label>
+                    <div class="input div">
+                        <div id="task">
+                            <label for="taskname">Task:</label><br>
+                            <input type="text" id="taskname" maxlength="25" style="width: 500"><br><br>
+                        </div>
+                    </div>
+                    <button id="add" onclick="addrow();" style="color: white;background-color: black;">Add task</button>
+                    <a href="http://localhost:3000/logout" style="color: black;">Logout</a>
+                </div>
+            </div>
+            <div class="Section2">
+                <div class="left">
+                    <div class="pending">
+                        <p><h2>Pending Task Table</h2></p>
+                       
+                        <table id="Table1">
+                            <tr style="background-color: black;color: white;">
+                              <th>ID</th>
+                              <th>Task</th>
+                              <th>Date</th>
+                              <th style="text-align: justify;">Status</th>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="completed">
+                        <p><h2>Completed Task Table</h2></p>
+                        <table id="Table2">
+                            <tr style="background-color: black;color: white;">
+                              <th>ID</th>
+                              <th>Task</th>
+                              <th>Date</th>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divdashboard">
+            <h1>Dash Board</h1>
+            <button id="go" onclick="dashboard();" style="color: white;background-color: black;">Update</button><br><br>
+            <table id="Table3">
+                <tr style="background-color: black;color: white;">
+                  <th>Day</th>
+                  <th>Number of Completion</th>
+                  <th>Number of hours spent Working</th>
+                </tr>
+              </table>
+              <div class="getting">
+                <br><br><br>
+                <label for="getduration">Copy paste day from above to get the task details:</label><br>
+                <input type="text" id="getduration" maxlength="20" style="width: 500"><br>
+                <button id="go" onclick="taskdashboard();" style="color: white;background-color: black;">GO</button>
+              </div>
+              <br>
+              <table id="Table4">
+                <tr style="background-color: black;color: white;">
+                  <th>Task ID</th>
+                  <th>Task Name</th>
+                  <th>Duration</th>
+                </tr>
+        </div>
+    </body>
+</html>

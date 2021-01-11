@@ -1,0 +1,38 @@
+.Section1 {
+    background-color: linen;
+}
+
+.Section2 {
+    display: flex;
+    margin-top: 10mm;
+}
+
+.right {
+    margin-left: 60mm;
+}
+
+.pending {
+    width: 150mm;
+    height: 100mm;
+    padding: 3mm;
+}
+
+.completed {
+    width: 150mm;
+    height: 100mm;
+    padding: 3mm;
+}
+
+#Table1,#Table2,th {
+    border: 1px solid black;
+}
+
+#Table1, #Table2 {
+    width: 100%;
+    border-color: white;
+}
+
+#Table3, #Table4 {
+    width: 50%;
+    border-color: white;
+}
