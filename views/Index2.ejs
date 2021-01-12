@@ -11,6 +11,7 @@
         <script src="/JS/pending.js" type="application/javascript"></script>
         <script src="/JS/completed.js" type="application/javascript"></script>
         <script src="/JS/dashboard.js" type="application/javascript"></script>
+        <script src="/JS/main.js" type="application/javascript"></script>
         <title></title>
     </head>
     <body>
@@ -76,20 +77,27 @@
                   <th>Number of Completion</th>
                   <th>Number of hours spent Working</th>
                 </tr>
-              </table>
-              <div class="getting">
+            </table>
+            <div class="getting">
                 <br><br><br>
                 <label for="getduration">Copy paste day from above to get the task details:</label><br>
                 <input type="text" id="getduration" maxlength="20" style="width: 500"><br>
                 <button id="go" onclick="taskdashboard();" style="color: white;background-color: black;">GO</button>
-              </div>
-              <br>
-              <table id="Table4">
-                <tr style="background-color: black;color: white;">
-                  <th>Task ID</th>
-                  <th>Task Name</th>
-                  <th>Duration</th>
-                </tr>
+                </div>
+                <br>
+                <table id="Table4">
+                    <tr style="background-color: black;color: white;">
+                        <th>Task ID</th>
+                        <th>Task Name</th>
+                        <th>Duration</th>
+                    </tr>
+                </table>
+                <br><br><br>
+            </div>
+            <div id="charts">
+                <button id="upchart" onclick="gui.tab();" style="color: white;background-color: black;">Update Charts</button>
+                <canvas id="mychart"></canvas>
+            </div>
         </div>
     </body>
 </html>
